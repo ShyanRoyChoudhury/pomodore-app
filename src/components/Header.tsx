@@ -5,7 +5,7 @@ interface HeaderProps{
 
 const Header: React.FC<HeaderProps> = ({children, className}) => {
     return(
-        <div className="flex">
+        <div style={{backgroundColor:"#112D4E"}} className="flex">
             {children}
         </div>
     )
