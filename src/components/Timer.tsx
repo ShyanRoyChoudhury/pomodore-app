@@ -66,13 +66,6 @@ function Timer() {
     }
     return (
       <div className='items-center max-w-fit max-h-fit'>
-        <div>
-          <button onClick={() => {
-            
-            startTime();
-          }}>start</button>
-          <button onClick={()=>{stopTime()}}>stop</button>
-        </div>
 
         <div style={{display: 'flex'}}>
             <div className='flex justify-center p-4'>
