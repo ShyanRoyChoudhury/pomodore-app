@@ -3,11 +3,11 @@ import { useState, useRef, useEffect } from 'react'
 
 function Timer() {
 
-    const [start, setStart] = useState(null);
-    const [now, setNow] = useState(null);
-    const [time, setTime] = useState(null);
-    const [flag, setFlag] = useState(false);
-    let id = useRef(null);
+    const [start, setStart] = useState<null | number>(null);
+    const [now, setNow] = useState<null | number>(null);
+    const [time, setTime] = useState<null | number>(null);
+    const [flag, setFlag] = useState<null | boolean>(false);
+    let id = useRef<any>(null);
 
     const startTime = () => {
         setStart(Date.now());
@@ -27,14 +27,17 @@ function Timer() {
       secPassed = ((now - start) / 1000).toFixed(0);
       }
     
-    
-    let timeRem = time * 60 - secPassed;
-    if(timeRem <= 0){
-        stopTime()
+    let timeRem = 0;
+    if(time!== null){
+      timeRem = time * 60 - secPassed;
+      if(timeRem <= 0){
+          stopTime()
+      }
+
     }
 
 
-    function formatTime(totalSeconds) {
+    function formatTime(totalSeconds: number) {
         const minutes = Math.floor(totalSeconds / 60);
         const seconds = totalSeconds % 60;
       
@@ -45,9 +48,11 @@ function Timer() {
     }
     
     function decFun(){
-      time - 5 < 0 ?
-          alertOption()
-          : setTime(prevCount => prevCount - 5);
+      if (time !== null && time - 5 < 0) {
+        alertOption();
+      } else {
+        setTime((prevCount) => (prevCount !== null ? prevCount - 5 : null));
+      };
   }
   
     function alertOption(){
@@ -117,7 +122,7 @@ function Timer() {
                         Start
                     </button>
                     <button className='px-2 font-semibold text-2xl'
-                    onClick={decFun}
+                    onClick={stopTime}
                     >
                         Stop
                     </button>
@@ -125,7 +130,7 @@ function Timer() {
 
                 <div className="">
                     <button className='px-2 font-bold text-2xl pt-[4px]'
-                        onClick={() => { setTime(prevCount => prevCount + 5) }}
+                        onClick={() => { setTime((prevCount:any) => prevCount + 5) }}
                     >
                         <HiOutlinePlusCircle />
                     </button>
