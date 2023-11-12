@@ -12,7 +12,7 @@ export default function Home() {
         <Header /> 
       </div>
       <div className=' items-center flex justify-center'>
-        <div className='mt-96 mb-64'></div>
+        <div className='mt-96 mb-60'></div>
         <div>
           <Box className='  hover:scale-105 transition'>
             <div>

@@ -13,8 +13,9 @@ const Box: React.FC<BoxProps> = ({children, className}) => {
         justify-center 
         
         rounded-lg
-        w-[350px]
-        h-[280px]
+        w-[300px]
+        md:w-[350px]
+        Md:h-[280px]
         p-2
         `, className)}>
             <div>

@@ -70,9 +70,9 @@ function Timer() {
       }
     }
     return (
-      <div className='items-center max-w-fit max-h-fit'>
+      <div className='items-center md:max-w-fit md:max-h-fit'>
 
-        <div style={{display: 'flex'}}>
+        <div className='flex justify-center'>
             <div className='flex justify-center p-4'>
                 <div className="flex-1 font-semibold text-8xl">
                       {formatTime(timeRem)}

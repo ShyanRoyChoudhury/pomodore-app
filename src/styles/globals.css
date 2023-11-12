@@ -11,7 +11,14 @@ body,
 }
 
 .footer {
-  position: fixed; /* or 'sticky' if you want it to stick within a certain container */
-  bottom: 0;
+  position: relative; /* or 'sticky' if you want it to stick within a certain container */
+  margin-top: 150px;
+  width: 100%;
+}
+
+.cfooter {
+  position: relative; /* or 'sticky' if you want it to stick within a certain container */
+  bottom: -235px;
+  
   width: 100%;
 }
