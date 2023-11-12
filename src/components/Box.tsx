@@ -7,11 +7,11 @@ interface BoxProps{
 
 const Box: React.FC<BoxProps> = ({children, className}) => {
     return(
-        <div style={{backgroundColor:'#3F72AF'}} 
+        <div style={{backgroundColor:'#427D9D'}} 
         className={twMerge(`
         flex 
         justify-center 
-        bg-739072
+        
         rounded-lg
         w-[350px]
         h-[280px]
