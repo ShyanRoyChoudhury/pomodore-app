@@ -5,7 +5,7 @@ function Timer() {
 
     const [start, setStart] = useState<null | number>(null);
     const [now, setNow] = useState<null | number>(null);
-    const [time, setTime] = useState<null | number>(null);
+    const [time, setTime] = useState<null | number>(1);
     const [flag, setFlag] = useState<null | boolean>(false);
     let id = useRef<any>(null);
 
@@ -108,7 +108,7 @@ function Timer() {
             
             <div className="flex justify-center my-4">
                 <div className="">
-                    <button className='px-2 font-bold text-2xl pt-[4px]'
+                    <button className='px-2 font-bold text-4xl pt-[1px]'
                         onClick={() => {decFun();}}
                     >
                         <HiOutlineMinusCircle/>
@@ -129,7 +129,7 @@ function Timer() {
                 </div>
 
                 <div className="">
-                    <button className='px-2 font-bold text-2xl pt-[4px]'
+                    <button className='px-2 font-bold text-4xl pt-[1px]'
                         onClick={() => { setTime((prevCount:any) => prevCount + 5) }}
                     >
                         <HiOutlinePlusCircle />
