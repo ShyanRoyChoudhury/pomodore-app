@@ -17,13 +17,13 @@ git clone https://github.com/ShyanRoyChoudhury/pomodore-app.git
 cd pomodire-app
 
 
-### Install the dependencies 
+#Install the dependencies 
 npm i
 
-### Interact with the page
+#Interact with the page
 go to localhost://3000
 
-### Build the project
+#Build the project
 npm run build
 ```
 
