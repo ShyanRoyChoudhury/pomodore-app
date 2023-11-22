@@ -11,7 +11,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 * Tailwind CSS
 
 ## Build from project 🛠️
-'''bash
+'''sh
 #Clone the project
 git clone https://github.com/ShyanRoyChoudhury/pomodore-app.git
 cd pomodire-app
